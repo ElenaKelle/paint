@@ -1,0 +1,32 @@
+```python
+import turtle
+
+window = turtle.Screen()
+window.bgcolor("white")
+window.title("Рисунок цветка")
+
+flower = turtle.Turtle()
+flower.shape("turtle")
+flower.speed(10)
+
+def draw_petal():
+    flower.color("red")
+    flower.begin_fill()
+    flower.circle(100, 60)
+    flower.left(120)
+    flower.circle(100, 60)
+    flower.left(120)
+    flower.end_fill()
+
+for _ in range(6):
+    draw_petal()
+    flower.right(60)
+
+flower.color("yellow")
+flower.begin_fill()
+flower.circle(50)
+flower.end_fill()
+
+flower.hideturtle()
+window.mainloop()
+``
